@@ -1,8 +1,10 @@
 :root {
   --brand-blue: #03b9e3;
   --brand-black: #000;
+  --brand-white: #fff;
 
-  --text-color: var(--brand-black);
+  --background-color: var(--brand-black);
+  --text-color: var(--brand-white);
   --link-color: var(--brand-blue);
 /* $link-color-hover: darken($brand-blue, 15%); */
 
@@ -63,6 +65,7 @@ html {
   font-size: 1em;
   line-height: 1.3em;
   color: var(--text-color);
+  background-color: var(--background-color);
 }
 @media (min-width: 20em) {
   html {
@@ -99,6 +102,7 @@ h2, h3, h4 {
 }
 
 a {
+  transition: .3s;
   color: var(--link-color);
   /* &:hover {
     color: $link-color-hover;
@@ -113,6 +117,10 @@ img {
 
 svg {
   fill: currentColor;
+}
+
+ul {
+  list-style: none;
 }
 
 dt {
@@ -139,4 +147,28 @@ dd {
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+/* Layout */
+.container {
+  padding-inline: 0.75rem;
+  margin-inline: auto;
+  max-width: 45em;
+}
+
+/* masthead */
+.masthead {
+  position: relative;
+  padding-top: 75%;
+  border: red solid 1px;
+}
+@media (min-width: 20em) {
+  .masthead {
+    padding-top: calc(75% + (25 - 75) * (100vw - 20em) / (87.5 - 20));
+  }
+}
+@media (min-width: 87.5em) {
+  .masthead {
+    padding-top: 25%;
+  }
 }
