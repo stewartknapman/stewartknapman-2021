@@ -3,18 +3,18 @@
 :root {
   --brand-blue: #03b9e3;
   --brand-purple: #5f03e3;
-  /* --brand-yellow: #ffdc00;
-  --brand-orange: #ff8600; */
+  --brand-yellow: #ffdc00;
+  --brand-orange: #ff8600;
   --brand-black: #000;
   --brand-white: #fff;
 
   --background-color: var(--brand-black);
   --text-color: var(--brand-white);
   --link-color: var(--brand-white);
-  --link-color-hover: var(--brand-blue);
+  --link-color-hover: var(--brand-yellow);
 
   --selection-color: var(--brand-black);
-  --selection-bg-color: var(--brand-blue);
+  --selection-bg-color: var(--brand-yellow);
 }
 
 /* Foundation */
@@ -111,7 +111,7 @@ h1, h2, h3, h4 {
 
 @supports (-webkit-background-clip: text) {
   h1, h2, h3, h4 {
-    background-image: linear-gradient(180deg, var(--brand-blue) 60%, var(--brand-purple) 100%);
+    background-image: linear-gradient(180deg, var(--brand-yellow) 60%, var(--brand-orange) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
